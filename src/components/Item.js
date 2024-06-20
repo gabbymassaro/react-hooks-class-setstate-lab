@@ -1,12 +1,5 @@
 import React from "react"
 
-// function Item({ name, category }) {
-//   const [isInCart, setIsInCart] = useState(false);
-
-//   function handleAddToCartClick() {
-//     setIsInCart((isInCart) => !isInCart);
-//   }
-
 class Item extends React.Component {
   constructor(props) {
     super(props)
@@ -18,15 +11,10 @@ class Item extends React.Component {
   }
 
   handleAddToCartClick() {
-    console.log("state: ", this.state)
-    console.log("setState: ", this.setState)
-
     this.setState({ isInCart: !this.state.isInCart })
   }
 
   render() {
-    console.log("isInCart: ", this.state.isInCart)
-
     return (
       <li className={this.state.isInCart ? "in-cart" : ""}>
         <span>{this.props.name}</span>
